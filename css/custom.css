@@ -1,0 +1,214 @@
+/**
+ * Source: http://nicolasgallagher.com/micro-clearfix-hack/
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+a {
+  color: #b31621;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+::selection {
+  background: #f4a1a7; }
+
+::-moz-selection {
+  background: #f4a1a7; }
+
+.caps {
+  text-transform: uppercase; }
+
+.centered {
+  text-align: center !important; }
+
+.font-orator {
+  font-family: "Orator", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif; }
+
+.font-ondine {
+  font-family: "Ondine", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif; }
+
+.italic {
+  font-style: italic !important; }
+
+.margin-bottom-0 {
+  margin-bottom: 0 !important; }
+
+.margin-top-0 {
+  margin-top: 0 !important; }
+
+h1, .h1 {
+  font-size: 50px; }
+
+h2, .h2 {
+  font-size: 40px; }
+
+h3, .h3 {
+  font-size: 45px; }
+
+h4, .h4 {
+  font-size: 30px; }
+
+h5, .h5 {
+  font-size: 24px; }
+
+.btn {
+  background: #b31621;
+  color: #fff;
+  border: 0;
+  padding: 8px 20px;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.5) 0 0 8px;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 20px; }
+  .btn:hover {
+    background: #fff;
+    color: #b31621;
+    transition: background 0.3s, color 0.2s; }
+
+.bg-effect {
+  background-color: #333;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1px 0; }
+  .bg-effect h1, .bg-effect p, .bg-effect article {
+    position: relative;
+    z-index: 2; }
+  .bg-effect:after {
+    background: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+
+.effect {
+  transition: all 0.3s;
+  background-color: #333;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/bg2.jpg); }
+  .effect a {
+    color: #be4856; }
+  .effect:after {
+    background: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+
+.bg-catering {
+  background-image: url(../img/bg1.jpg); }
+
+.bg-menu {
+  background-image: url(../img/bg-v1.jpg); }
+
+.bg-winkel {
+  background-image: url(../img/bg2.jpg); }
+
+.clearlist {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+@media (min-width: 784px) {
+  .pricelist span {
+    float: right; } }
+
+#ip-container {
+  position: relative;
+  z-index: 2; }
+
+.cf {
+  *zoom: 1; }
+  .cf:before, .cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .cf:after {
+    clear: both; }
+
+dt, dd {
+  float: left; }
+
+dt {
+  width: 70%;
+  clear: left;
+  font-weight: bold; }
+
+dd {
+  width: 30%;
+  margin-left: 0; }
+
+.ip-header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  min-height: 480px;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg1.jpg);
+  background-size: cover; }
+  .ip-header .tokonina {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin-left: -150px; }
+  .ip-header:after {
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: "";
+    background: #b31621; }
+
+.tokonina {
+  margin: 30px auto 0;
+  width: 300px;
+  height: 120px;
+  background-image: url(../img/logo.png);
+  background-size: cover; }
+  .tokonina a {
+    display: block;
+    text-indent: -9999px; }
+
+@media (min-width: 784px) {
+  .textbox {
+    margin: 0 5%;
+    font-size: 20px; } }
+
+.signatured {
+  padding: 0 0 30px;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-size: 18px; }
+  .signatured a {
+    color: #fff;
+    font-style: italic;
+    font-size: 20px;
+    display: inline-block;
+    padding: 0 3px;
+    letter-spacing: 1px; }
+    .signatured a:hover {
+      text-decoration: none;
+      background: rgba(179, 22, 33, 0.5);
+      transition: background 0.2s; }

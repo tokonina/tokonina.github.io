@@ -1,33 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
+---
+layout: home
+---
 
-  <head>
-  
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  
-  <title>Toko Nina | Haarlem</title>
-
-  <meta name="description" content="Toko Nina staat al sinds 1981 garant voor originele en smakelijke Indonesische gerechten" />
-  <meta name="keywords" content="Toko Nina - Haarlem. INDONESISCHE SPECIALITEITEN" />
-  <meta name="author" content="Ivana Setiawan" />
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-
-  <!-- START: Stylesheet -->
-  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="/css/effect.css">
-  <link rel="stylesheet" type="text/css" href="/css/style-nav.css">
-  <link rel="stylesheet" type="text/css" href="/css/linkarrow.css">
-  <link rel="stylesheet" type="text/css" href="/css/custom.css">
-  <!-- END: Stylesheet -->
-
-  <script src="/js/modernizr.custom.js"></script>
-</head>
-
-  <body class="home">
-
-    <div class="effect">
+<div class="effect">
   <div id="ip-container" class="ip-container">
     <!-- initial header -->
     <header class="ip-header">
@@ -41,8 +16,7 @@
     </header>
     <!-- main content -->
     <div class="ip-main">
-      <h1 class="tokonina"><a href="">Toko Nina Haarlem</a></h1>
-<p class="centered"><button id="trigger-overlay" type="button" class="btn">Navigatie</button></p>
+      {% include header.html %}
       <article class="content-box">
         <div class="textbox">
           <p>Toko Nina staat al sinds 1981 garant voor originele en smakelijke Indonesische gerechten. U kunt bij de toko terecht voor onder andere snacks en complete maaltijden. Bovendien zijn in de toko alle ingrediënten voor de Aziatische keuken verkrijgbaar en is er een ruime keuze aan Japans en Chinees porseleinen servies en Aziatisch keukengerei.
@@ -54,9 +28,7 @@
           <p>Tot ziens in onze toko!</p>
         </div>
       </article>
-      <footer class="signatured centered">
-  Passionately developed by <a href="http://ivanasetiawan.com" target="_blank">I. Setiawan</a>
-</footer>
+      {% include signature.html %}
     </div>
   </div><!-- /container -->
 </div>
@@ -64,27 +36,3 @@
 <script src="js/classie.js"></script>
 <script src="js/pathLoader.js"></script>
 <script src="js/main.js"></script>
-
-    <!-- open/close -->
-<div class="overlay overlay-contentpush">
-  <button type="button" class="overlay-close">Close</button>
-  <nav class="link-arrow">
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/menu.html">Menu</a></li>
-      <li><a href="/catering.html">Catering</a></li>
-      <li><a href="/winkel.html">Winkel</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</div>
-
-<script src="/js/navbehaviour.js"></script>
-<script src="/js/classie.js"></script>
-<script src="/js/pathLoader.js"></script>
-<script src="/js/main.js"></script>
-
-
-  </body>
-
-</html>

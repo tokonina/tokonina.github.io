@@ -4,6 +4,7 @@
 	margin: 20px 0;
 }
 
+/* Overlay closing cross */
 .overlay {
 	position: fixed;
 	width: 100%;
@@ -12,59 +13,69 @@
 	left: 0;
 	background: rgba(179,22,33,0.9);
 	z-index: 3;	
-}
 
-/* Overlay closing cross */
-.overlay .overlay-close {
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	overflow: hidden;
-	border: none;
-	background: url(../img/cross.png) no-repeat center center;
-	text-indent: 200%;
-	color: transparent;
-	outline: none;
-	z-index: 100;
-}
+	.overlay-close {
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		overflow: hidden;
+		border: none;
+		background: url(../img/cross.png) no-repeat center center;
+		text-indent: 200%;
+		color: transparent;
+		outline: none;
+		z-index: 100;
+	}
+	
+	/* Menu style */
+	nav {
+		text-align: center;
+		position: relative;
+		top: 50%;
+		height: 60%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
 
-/* Menu style */
-.overlay nav {
-	text-align: center;
-	position: relative;
-	top: 50%;
-	height: 60%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0 auto;
+		display: inline-block;
+		height: 100%;
+		position: relative;
+		
+		li {
+			display: block;
+			height: 30px;
+			min-height: 30px;
+			margin-bottom: 20px;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;	
 
-.overlay ul {
-	list-style: none;
-	padding: 0;
-	margin: 0 auto;
-	display: inline-block;
-	height: 100%;
-	position: relative;
-}
+			a {
+				font-size: 30px;
+				font-weight: 300;
+				display: block;
+				color: #333;
+				font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+				font-style: italic;
+			}
+		}
+	}
 
-.overlay ul li {
-	display: block;
-	height: 30px;
-	min-height: 30px;
-	margin-bottom: 20px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.overlay ul li a {
-	font-size: 30px;
-	font-weight: 300;
-	display: block;
-	color: #333;
-	font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
-	font-style: italic;
+	@media screen and (max-height: 30.5em) {
+		nav {
+			height: 70%;
+			font-size: 34px;
+		}
+		
+		ul li {
+			min-height: 34px;
+		}
+	}
 }
 
 /* Effects */
@@ -124,12 +135,3 @@ html, body {
 	transition: transform 0.5s;
 }
 
-@media screen and (max-height: 30.5em) {
-	.overlay nav {
-		height: 70%;
-		font-size: 34px;
-	}
-	.overlay ul li {
-		min-height: 34px;
-	}
-}

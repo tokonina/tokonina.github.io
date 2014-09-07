@@ -139,8 +139,7 @@ dd {
   background-color: #333;
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/bg2.jpg); }
+  background-size: cover; }
   .effect a {
     color: #be4856; }
   .effect:after {
@@ -153,15 +152,6 @@ dd {
     top: 0;
     left: 0;
     z-index: 1; }
-
-.bg-catering {
-  background-image: url(../img/bg1.jpg); }
-
-.bg-menu {
-  background-image: url(../img/bg-v1.jpg); }
-
-.bg-winkel {
-  background-image: url(../img/bg2.jpg); }
 
 @media (min-width: 784px) {
   .pricelist span {

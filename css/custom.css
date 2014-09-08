@@ -11,6 +11,9 @@
   font-family: 'Orator';
   src: url("../fonts/orator/orator.eot");
   src: url("../fonts/orator/orator.eot?#iefix") format("embedded-opentype"), url("../fonts/orator/orator.woff") format("woff"), url("../fonts/orator/orator.ttf") format("truetype"), url("../fonts/orator/orator.svg") format("svg"); }
+html, body {
+  background: #333; }
+
 /**
  * Source: http://nicolasgallagher.com/micro-clearfix-hack/
  * For modern browsers
@@ -115,6 +118,7 @@ dd {
   list-style: none; }
 
 .bg-effect {
+  height: 100%;
   background-color: #333;
   background-position: top center;
   background-repeat: no-repeat;
@@ -133,6 +137,10 @@ dd {
     top: 0;
     left: 0;
     z-index: 1; }
+
+.bg-pattern {
+  padding: 1px 0;
+  background: url(../img/wood.png); }
 
 .effect {
   transition: all 0.3s;
@@ -469,7 +477,7 @@ html, body {
 .content-box {
   margin: 0 auto 50px;
   padding: 30px;
-  min-height: 400px;
+  min-height: 550px;
   max-width: 1000px;
   width: 100%;
   border-radius: 8px;

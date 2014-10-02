@@ -1,20 +1,18 @@
-<!-- open/close -->
-<div class="overlay overlay-contentpush">
-  <button type="button" class="overlay-close">Close</button>
-  <nav class="link-arrow">
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/menu.html">Menu</a></li>
-      <li><a href="/catering.html">Catering</a></li>
-      <li><a href="/winkel.html">Winkel</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</div>
-
-<script src="{{ "/js/navbehaviour.js" | prepend: site.baseurl }}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="{{ "/js/jquery.cookie.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/classie.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/pathLoader.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/blazy.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/imageScript.js" | prepend: site.baseurl }}"></script>
+
+<script>
+
+  // Show the loader only when user has NO cookie record
+  if(($.cookie('homeloader') && $.cookie('homeloader') == 'ivana')) {
+      $('.ip-header').hide();
+    } 
+
+  $.cookie('homeloader', 'ivana', { expires: 365, path: '/' });
+
+</script>

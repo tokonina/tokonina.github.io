@@ -100,8 +100,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   // Show the loader only when user has NO cookie record
   if(($.cookie('homeloader') && $.cookie('homeloader') == 'ivana')) {
-      $('.ip-header').hide();
-    } 
+    $('.ip-container').removeClass('loading').addClass('loaded');
+    $('body').addClass('layout-switch');
+    $('.ip-header').hide();
+  } 
 
   $.cookie('homeloader', 'ivana', { expires: 365, path: '/' });
 

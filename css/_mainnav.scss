@@ -2,6 +2,7 @@
   @extend .h7;
   z-index: 10;
   position: relative;
+  text-align: center;
   
   ul { 
     margin: 0; 
@@ -19,8 +20,6 @@
   }
 
   @media (min-width: $MSize) {
-    text-align: center;
-    
     a {
       padding: 15px 15px 10px;
       text-transform: uppercase;

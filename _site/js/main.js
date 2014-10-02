@@ -51,11 +51,11 @@
 						clearInterval( interval );
 
 						var onEndHeaderAnimation = function(ev) {
-							if( support.animations ) {
+							if( support.animations) {
 								if( ev.target !== header ) return;
 								this.removeEventListener( animEndEventName, onEndHeaderAnimation );
 							}
-
+					
 							classie.add( document.body, 'layout-switch' );
 							window.removeEventListener( 'scroll', noscroll );
 						};

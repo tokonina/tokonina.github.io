@@ -10,8 +10,10 @@
 
   // Show the loader only when user has NO cookie record
   if(($.cookie('homeloader') && $.cookie('homeloader') == 'ivana')) {
-      $('.ip-header').hide();
-    } 
+    $('.ip-container').removeClass('loading').addClass('loaded');
+    $('body').addClass('layout-switch');
+    $('.ip-header').hide();
+  } 
 
   $.cookie('homeloader', 'ivana', { expires: 365, path: '/' });
 

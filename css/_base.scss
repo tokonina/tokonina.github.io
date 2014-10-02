@@ -129,8 +129,8 @@ dd {
   outline: none;
   border-radius: 5px;
   box-shadow: rgba(255, 255, 255, 0.5) 0 0 8px;
-  font-family: $font-serif;
-  font-style: italic;
+  font-family: $font-orator;
+  // font-style: italic;
   letter-spacing: 1px;
   font-size: 20px;
 
@@ -145,6 +145,10 @@ dd {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.clearfloat {
+  clear: both !important;
 }
 
 .wrapper {

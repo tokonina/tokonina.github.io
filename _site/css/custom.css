@@ -173,6 +173,11 @@ form textarea {
 form textarea {
   min-height: 200px; }
 
+#pushstat {
+  position: absolute;
+  bottom: 0;
+  z-index: -1; }
+
 .bg-effect {
   height: 100%;
   background-color: #333;

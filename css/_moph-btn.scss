@@ -25,7 +25,7 @@
 
 .morph-content {
   pointer-events: none;
-  padding: 20px;
+  padding: 50px 20px 20px;
   color: #fff;
 }
 
@@ -379,6 +379,11 @@
 
 .icon-close {
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1px 10px 5px;
+  background: $color-grey;
 }
 
 .morph-button-overlay.scroll .morph-content {

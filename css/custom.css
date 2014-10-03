@@ -63,10 +63,10 @@ h3, .h3 {
 h4, .h4 {
   font-size: 30px; }
 
-h5, .h5 {
+h5, .h5, form label {
   font-size: 24px; }
 
-h6, .h6 {
+h6, .h6, .send-email a {
   font-size: 20px; }
 
 h7, .h7, .mainnav {
@@ -132,6 +132,47 @@ dd {
   max-width: 1100px;
   width: 90%; }
 
+.adress {
+  margin-bottom: 30px; }
+  @media (min-width: 784px) {
+    .adress {
+      float: left; } }
+
+.send-email a {
+  display: inline-block;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-weight: normal !important;
+  text-transform: none !important;
+  font-style: italic;
+  padding: 8px 20px;
+  border-radius: 3px;
+  background: #b31621;
+  color: #fff;
+  margin: 20px 0; }
+  .send-email a:hover {
+    text-decoration: none;
+    background: #333333; }
+  @media (min-width: 784px) {
+    .send-email a {
+      float: right;
+      margin-top: 40px; } }
+
+form label {
+  display: block;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-style: italic;
+  margin-bottom: 5px; }
+form input,
+form textarea {
+  padding: 8px 10px;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  margin-bottom: 20px; }
+form textarea {
+  min-height: 200px; }
+
 .bg-effect {
   height: 100%;
   background-color: #333;
@@ -155,7 +196,7 @@ dd {
 
 .bg-pattern {
   padding: 1px 0;
-  background: url(../img/wood.png); }
+  background: url(../img/wood.jpg); }
 
 .effect {
   transition: all 0.3s;
@@ -193,7 +234,7 @@ dd {
     .mainnav a {
       padding: 15px 15px 10px;
       text-transform: uppercase;
-      border-radius: 4px 4px 0 0; }
+      border-radius: 3px 3px 0 0; }
       .mainnav a:hover, .mainnav a.active {
         color: #333333;
         text-decoration: none;
@@ -254,7 +295,7 @@ dd {
 
 .morph-content {
   pointer-events: none;
-  padding: 20px;
+  padding: 50px 20px 20px;
   color: #fff; }
 
 .morph-button.open .morph-content {
@@ -552,7 +593,12 @@ dd {
   overflow: hidden; }
 
 .icon-close {
-  cursor: pointer; }
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1px 10px 5px;
+  background: #333333; }
 
 .morph-button-overlay.scroll .morph-content {
   overflow-y: scroll; }

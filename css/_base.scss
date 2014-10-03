@@ -211,3 +211,9 @@ form {
     min-height: 200px;
   }
 }
+
+#pushstat {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}

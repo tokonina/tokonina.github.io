@@ -63,8 +63,14 @@ h3, .h3 {
 h4, .h4 {
   font-size: 30px; }
 
-h5, .h5 {
+h5, .h5, form label {
   font-size: 24px; }
+
+h6, .h6, .send-email a {
+  font-size: 20px; }
+
+h7, .h7, .mainnav {
+  font-size: 18px; }
 
 a {
   color: #b31621;
@@ -103,8 +109,7 @@ dd {
   outline: none;
   border-radius: 5px;
   box-shadow: rgba(255, 255, 255, 0.5) 0 0 8px;
-  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-  font-style: italic;
+  font-family: "Orator", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   letter-spacing: 1px;
   font-size: 20px; }
   .btn:hover {
@@ -116,6 +121,57 @@ dd {
   margin: 0;
   padding: 0;
   list-style: none; }
+
+.clearfloat {
+  clear: both !important; }
+
+.wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 0 10em 0;
+  max-width: 1100px;
+  width: 90%; }
+
+.adress {
+  margin-bottom: 30px; }
+  @media (min-width: 784px) {
+    .adress {
+      float: left; } }
+
+.send-email a {
+  display: inline-block;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-weight: normal !important;
+  text-transform: none !important;
+  font-style: italic;
+  padding: 8px 20px;
+  border-radius: 3px;
+  background: #b31621;
+  color: #fff;
+  margin: 20px 0; }
+  .send-email a:hover {
+    text-decoration: none;
+    background: #333333; }
+  @media (min-width: 784px) {
+    .send-email a {
+      float: right;
+      margin-top: 40px; } }
+
+form label {
+  display: block;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-style: italic;
+  margin-bottom: 5px; }
+form input,
+form textarea {
+  padding: 8px 10px;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  margin-bottom: 20px; }
+form textarea {
+  min-height: 200px; }
 
 .bg-effect {
   height: 100%;
@@ -140,7 +196,7 @@ dd {
 
 .bg-pattern {
   padding: 1px 0;
-  background: url(../img/wood.png); }
+  background: url(../img/wood.jpg); }
 
 .effect {
   transition: all 0.3s;
@@ -160,6 +216,33 @@ dd {
     top: 0;
     left: 0;
     z-index: 1; }
+
+.mainnav {
+  z-index: 10;
+  position: relative;
+  text-align: center; }
+  .mainnav ul {
+    margin: 0;
+    padding: 20px 0; }
+  .mainnav a {
+    padding: 5px 0;
+    text-transform: uppercase; }
+    .mainnav a:hover, .mainnav a.active {
+      color: #f3f3f3;
+      text-decoration: underline; }
+  @media (min-width: 784px) {
+    .mainnav a {
+      padding: 15px 15px 10px;
+      text-transform: uppercase;
+      border-radius: 3px 3px 0 0; }
+      .mainnav a:hover, .mainnav a.active {
+        color: #333333;
+        text-decoration: none;
+        background: #f3f3f3; }
+    .mainnav ul {
+      padding: 40px 0 8px; }
+    .mainnav li {
+      display: inline-block; } }
 
 @media (min-width: 784px) {
   .pricelist span {
@@ -189,154 +272,432 @@ dd {
       background: rgba(179, 22, 33, 0.5);
       transition: background 0.2s; }
 
-/* Overlay style */
-#trigger-overlay {
-  margin: 20px 0; }
+/* Morph Button: Default Styles */
+.morph-button {
+  position: relative;
+  display: block;
+  margin: 0 auto; }
 
-/* Overlay closing cross */
-.overlay {
-  position: fixed;
+.morph-button > button {
+  position: relative;
+  padding: 0 1em;
+  border: none;
+  background-color: #b31621;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 40px;
+  overflow: hidden; }
+
+.morph-button.open > button {
+  pointer-events: none; }
+
+.morph-content {
+  pointer-events: none;
+  padding: 50px 20px 20px;
+  color: #fff; }
+
+.morph-button.open .morph-content {
+  pointer-events: auto; }
+
+/* Common styles for overlay and modal type (fixed morph) */
+.morph-button-fixed,
+.morph-button-fixed .morph-content {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 40px; }
+
+.morph-button-fixed > button {
+  z-index: 1000;
   width: 100%;
   height: 100%;
+  -webkit-transition: opacity 0.1s 0.5s;
+  transition: opacity 0.1s 0.5s; }
+
+.morph-button-fixed.open > button {
+  opacity: 0;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s; }
+
+.morph-button-fixed .morph-content {
+  position: fixed;
+  z-index: 900;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+  transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s; }
+
+.morph-button-fixed.open .morph-content {
+  opacity: 1; }
+
+.morph-button-fixed .morph-content > div {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s, visibility 0s 0.1s, height 0s 0.1s;
+  transition: opacity 0.1s, visibility 0s 0.1s, height 0s 0.1s; }
+
+.morph-button-fixed.open .morph-content > div {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s 0.5s;
+  transition: opacity 0.3s 0.5s; }
+
+.morph-button-fixed.active > button {
+  z-index: 2000; }
+
+.morph-button-fixed.active .morph-content {
+  z-index: 1900; }
+
+/* Transitions for overlay button and sidebar button */
+.morph-button-overlay .morph-content,
+.morph-button-sidebar .morph-content {
+  -webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+  transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s; }
+
+.morph-button-overlay.open .morph-content,
+.morph-button-sidebar.open .morph-content {
+  -webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+  transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s; }
+
+/* Morph Button Style: Overlay */
+.morph-button.morph-button-overlay {
+  margin: 50px auto; }
+
+.morph-button-overlay .morph-content {
+  overflow: hidden;
+  background: #e85657; }
+
+.morph-button-overlay.open .morph-content {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+  height: 100%; }
+
+/* Morph Button Style: Modal */
+.morph-button-modal::before {
+  position: fixed;
   top: 0;
   left: 0;
-  background: rgba(179, 22, 33, 0.9);
-  z-index: 3;
-  /* Menu style */ }
-  .overlay .overlay-close {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    overflow: hidden;
-    border: none;
-    background: url(../img/cross.png) no-repeat center center;
-    text-indent: 200%;
-    color: transparent;
-    outline: none;
-    z-index: 100; }
-  .overlay nav {
-    text-align: center;
-    position: relative;
-    top: 50%;
-    height: 60%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); }
-  .overlay ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    height: 100%;
-    position: relative; }
-    .overlay ul li {
-      display: block;
-      height: 30px;
-      min-height: 30px;
-      margin-bottom: 20px;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden; }
-      .overlay ul li a {
-        font-size: 30px;
-        font-weight: 300;
-        display: block;
-        color: #333;
-        font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
-        font-style: italic; }
-  @media screen and (max-height: 30.5em) {
-    .overlay nav {
-      height: 70%;
-      font-size: 34px; }
-    .overlay ul li {
-      min-height: 34px; } }
-
-/* Effects */
-html, body {
-  overflow-x: hidden; }
-
-.container {
-  overflow-x: hidden;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s; }
-
-.container.overlay-open {
-  -webkit-transform: translateX(50%);
-  transform: translateX(50%); }
-
-.container::after {
+  z-index: 800;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   content: '';
   opacity: 0;
-  visibility: hidden;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  pointer-events: none; }
+
+.morph-button-modal.open::before {
+  opacity: 1;
+  pointer-events: auto; }
+
+.morph-button-modal.active::before {
+  z-index: 1800; }
+
+.morph-button-modal .morph-content {
+  overflow: hidden;
+  -webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+  transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s; }
+
+.morph-button-modal.open .morph-content {
+  top: 50% !important;
+  left: 50% !important;
+  margin: -210px 0 0 -300px;
+  width: 600px;
+  height: 420px;
+  -webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+  transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s; }
+
+/* Colors and sizes for individual modals */
+.morph-button.morph-button-modal-1 {
+  float: left; }
+
+.morph-button.morph-button-modal-2,
+.morph-button.morph-button-modal-3 {
+  display: inline-block;
+  margin: 10px 15px; }
+
+.morph-button-modal-1 > button,
+.morph-button-modal-1 .morph-content {
+  background-color: #b31621; }
+
+.morph-button-modal-2 > button,
+.morph-button-modal-2 .morph-content,
+.morph-button-modal-3 > button,
+.morph-button-modal-3 .morph-content {
+  background-color: #fef0e3;
+  color: #e75854; }
+
+.morph-button-modal-4 {
+  display: inline-block; }
+
+.morph-button-modal-4 > button,
+.morph-button-modal-4 .morph-content {
+  background-color: #faf1e0;
+  color: #b31621; }
+
+.morph-button-modal-4 > button span,
+.morph-button-modal-4 .morph-clone {
+  padding-left: 10px;
+  color: #286f81; }
+
+.morph-button-modal-4 .morph-clone {
+  position: absolute;
+  right: 34px;
+  bottom: 30px;
+  z-index: 100;
+  letter-spacing: 1px;
+  font-weight: 700;
+  -webkit-transition: bottom 0.4s 0.1s, right 0.4s 0.1s;
+  transition: bottom 0.4s 0.1s, right 0.4s 0.1s; }
+
+.morph-button-modal-4.open .morph-clone,
+.no-js .morph-button-modal-4 .morph-clone {
+  right: 10px;
+  bottom: 10px; }
+
+.morph-button-modal-1::before {
+  background: rgba(240, 221, 204, 0.7); }
+
+.morph-button-modal-2.open .morph-content {
+  margin: -210px 0 0 -170px;
+  width: 340px;
+  height: 420px; }
+
+.morph-button-modal-3.open .morph-content {
+  margin: -255px 0 0 -210px;
+  width: 420px;
+  height: 510px; }
+
+.morph-button-modal-3.open .morph-content > div {
+  height: 420px; }
+
+.morph-button-modal-2.open .morph-content > div,
+.morph-button-modal-3.open .morph-content > div {
+  -webkit-transition: opacity 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s; }
+
+.morph-button-modal-4.open .morph-content {
+  margin: -200px 0 0 -320px;
+  width: 640px;
+  height: 400px; }
+
+/* Morph Button Style: In the content flow */
+.morph-button-inflow {
+  overflow: hidden;
+  max-width: 100%;
+  height: 70px; }
+
+.morph-button-inflow > button {
+  width: 100%;
+  line-height: 70px; }
+
+.morph-button-inflow .morph-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+.morph-button-inflow .morph-content .morph-clone {
+  padding: 0;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 70px; }
+
+/* Colors and sizes for individual in flow buttons */
+.morph-button-inflow-1 {
+  width: 600px;
+  margin: 2em auto;
+  -webkit-transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1); }
+
+.morph-button-inflow-1 > button span {
+  visibility: hidden; }
+
+.morph-button-inflow-1 .morph-content .morph-clone {
+  color: #f9f6e5;
+  background: #e85657; }
+
+.morph-button-inflow-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  background-color: #fef0e3;
+  -webkit-transition: height 0.3s, width 0.3s, -webkit-transform 0.3s;
+  transition: height 0.3s, width 0.3s, transform 0.3s;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); }
+
+.morph-button-inflow-2 > button {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-  transition: opacity 0.5s, visibility 0s 0.5s; }
-
-.container.overlay-open::after {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s; }
-
-.overlay-contentpush {
-  /*background: rgba(153,204,51,1);*/
-  background: rgba(179, 22, 33, 0.9);
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
-  transition: transform 0.5s, visibility 0s 0.5s; }
-
-.overlay-contentpush.open {
-  visibility: visible;
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s; }
-
-/* Arrow */
-.link-arrow a {
-  padding: 0 0.25em;
-  font-weight: 500;
+  background-color: transparent;
+  color: #e75854;
   -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  -webkit-transform: translateX(0);
-  transform: translateX(0); }
-  .link-arrow a:hover, .link-arrow a::after {
-    -webkit-transform: translateX(-1em);
-    transform: translateX(-1em);
-    text-decoration: none; }
-  .link-arrow a::before, .link-arrow a::after {
-    position: absolute;
-    height: 100%;
-    content: ''; }
-  .link-arrow a::before {
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    background: #fff; }
-  .link-arrow a::after {
-    left: 100%;
-    z-index: -2;
-    width: 1em;
-    background: #333333 url(../img/arrow_right.svg) no-repeat 50% 50%;
-    background-size: 60% auto;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    pointer-events: auto; }
-  .link-arrow a:hover::after, .link-arrow a:focus::after {
-    -webkit-transform: translateX(0);
-    transform: translateX(0); }
+  transition: transform 0.3s; }
 
+.morph-button-inflow-2.open > button {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%); }
+
+.morph-button-inflow-2 .morph-content {
+  width: 260px;
+  height: 200px; }
+
+.morph-button-inflow-2.open {
+  width: 260px; }
+
+/* Morph Button Style: Sidebar */
+.morph-button-sidebar,
+.morph-button-sidebar .morph-content {
+  width: 60px;
+  height: 60px; }
+
+.morph-button-sidebar {
+  position: fixed;
+  bottom: 50px;
+  left: 50px; }
+
+.morph-button-sidebar > button {
+  line-height: 60px;
+  font-size: 1.6em;
+  padding: 0; }
+
+.morph-button-sidebar .morph-content {
+  background: #e85657; }
+
+.morph-button-sidebar.open .morph-content {
+  top: 0 !important;
+  left: 0 !important;
+  width: 300px;
+  height: 100%;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden; }
+
+/* Let's add some nice easing for all cases */
+.morph-button .morph-content,
+.morph-button.open .morph-content,
+.morph-button-modal-4 .morph-clone {
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+
+/* Helper classes */
+.noscroll {
+  overflow: hidden; }
+
+.icon-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1px 10px 5px;
+  background: #333333; }
+
+.morph-button-overlay.scroll .morph-content {
+  overflow-y: scroll; }
+
+.morph-button-sidebar.scroll .morph-content {
+  overflow: auto; }
+
+/* No JS fallback: let's hide the button and show the content */
+.no-js .morph-button > button {
+  display: none; }
+
+.no-js .morph-button {
+  margin: 10px 0;
+  float: none; }
+
+.no-js .morph-button,
+.no-js .morph-button .morph-content,
+.no-js .morph-button .morph-content > div {
+  position: relative;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  top: auto;
+  left: auto;
+  -webkit-transform: none;
+  transform: none;
+  pointer-events: auto; }
+
+.no-js .morph-button .morph-content .icon-close {
+  display: none; }
+
+.no-js .morph-button-sidebar {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+  background: #e85657;
+  overflow: auto; }
+
+.no-transition {
+  -webkit-transition: none !important;
+  transition: none !important; }
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .morph-button-modal.open .morph-content {
+    top: 0% !important;
+    left: 0% !important;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+    transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s; } }
+@media screen and (max-width: 400px) {
+  .morph-button-fixed,
+  .morph-button-fixed .morph-content {
+    width: 200px;
+    height: 40px; }
+
+  .morph-button-fixed > button {
+    font-size: 75%; }
+
+  .morph-button-sidebar > button {
+    font-size: 1.6em; }
+
+  .morph-button-inflow .morph-content .morph-clone {
+    font-size: 0.9em; }
+
+  .morph-button-modal-4,
+  .morph-button-modal-4 .morph-content {
+    width: 220px;
+    height: 120px; }
+
+  .morph-button-modal-4 > button {
+    font-size: 100%;
+    line-height: 50px; }
+
+  .morph-button-modal-4 > button span {
+    display: block; }
+
+  .morph-button-modal-4 .morph-clone {
+    right: 83px;
+    bottom: 26px; }
+
+  .morph-button-sidebar,
+  .morph-button-sidebar .morph-content {
+    width: 100% !important;
+    height: 60px !important; }
+
+  .morph-button-sidebar {
+    bottom: 0px;
+    left: 0px; }
+
+  .morph-button-sidebar.open .morph-content {
+    height: 100% !important; } }
 @-webkit-keyframes animInitialHeader {
   from {
     opacity: 0;

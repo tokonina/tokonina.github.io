@@ -15,4 +15,10 @@
     }]
   });
 
+  // Active state on menu
+  if(location.pathname === "/") {
+    $('.mainnav').find('li:first-child a').addClass('active');
+  } else {
+    $('.mainnav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+  }
 })();

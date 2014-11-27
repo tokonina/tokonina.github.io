@@ -21,4 +21,8 @@
   } else {
     $('.mainnav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
   }
+
+  if ($('.map').length) {
+    initializeRoute();
+  } 
 })();

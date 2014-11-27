@@ -64,32 +64,59 @@ html, body {
 .margin-bottom-0 { margin-bottom: 0 !important; }
 .margin-top-0 { margin-top: 0 !important; }
 
+h1, h2, h3, h4, h5, h6, h7,
+.h1, .h2, .h3, .h4, .h5, .h6, .h7 {
+  margin-top: 0;
+  margin-bottom: 20px; 
+}
+
 h1, .h1 {
-  font-size: 50px;
+  font-size: 32px;
+  @media (min-width: $MSize) {
+    font-size: 50px;
+  }
 }
 
 h2, .h2 {
-  font-size: 40px;
+  font-size: 30px;
+  @media (min-width: $MSize) {
+    font-size: 45px;
+  }
 }
 
 h3, .h3 {
-  font-size: 45px;
+  font-size: 28px;
+  @media (min-width: $MSize) {
+    font-size: 40px;
+  }
 }
 
 h4, .h4 {
-  font-size: 30px;
+  font-size: 25px;
+  @media (min-width: $MSize) {
+    font-size: 30px;
+  }
 }
 
 h5, .h5 {
-  font-size: 24px;
+  font-size: 20px;
+  @media (min-width: $MSize) {
+    font-size: 24px;
+  }
 }
 
 h6, .h6 {
-  font-size: 20px;
+  font-size: 18px;
+  @media (min-width: $MSize) {
+    font-size: 20px;
+  }
 }
 
 h7, .h7 {
-  font-size: 18px;
+  font-size: 16px;
+  @media (min-width: $MSize) {
+    font-size: 18px;
+  }
 }
 
 a {
@@ -110,14 +137,19 @@ dt, dd {
 }
 
 dt {
-  width: 70%;
-  clear: left;
   font-weight: bold;
+  clear: left;
+  @media (min-width: $MSize) {
+    width: 50%;
+  }
 }
 
 dd {
-  width: 30%;
-  margin-left: 0;
+  margin-left: 20px;
+  @media (min-width: $MSize) {
+    width: 30%;
+    margin-left: 0;
+  }
 }
 
 .btn {
@@ -163,10 +195,11 @@ dd {
   margin-bottom: 30px;
   @media (min-width: $MSize) {
     float: left; 
+    width: 50%;
   }
 }
 
-.send-email a {
+.btn-serif {
   display: inline-block;
   font-family: $font-serif;
   font-weight: normal !important;
@@ -176,15 +209,20 @@ dd {
   border-radius: 3px;
   background: $color-red;
   color: #fff;
-  margin: 20px 0;
+  margin: 0 0 20px;
   @extend .h6;
   &:hover {
     text-decoration: none;
     background: $color-grey;
   }
   @media (min-width: $MSize) {
-    float: right;
-    margin-top: 40px;
+    float: left;
+    margin-top: 60px;
+
+    &.btn-serif-route {
+      margin-top: 0;
+      float: right;
+    }
   }
 }
 
@@ -216,4 +254,59 @@ form {
   position: absolute;
   bottom: 0;
   z-index: -1;
+}
+
+.download {
+  display: block;
+  background: url(../img/download.png) 15px center no-repeat rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 15px 15px 15px 65px;
+  &:hover {
+    background-color: rgba(179,22,33,0.3);
+  }
+  @media (min-width: $SSize) {
+    margin: 30px 0;
+  }
+}
+
+////////
+// MAP
+.map {
+  display: none; 
+  @media (min-width: $SSize) {
+    display: block;
+  }
+}
+
+#map_canvas {
+  @media (min-width: $SSize) {
+    height: 350px;
+  }
+  @media (min-width: $MSize) {
+    height: 500px;
+  }
+}
+
+#routeForm {
+  input[type="submit"] {
+    width: auto;
+  }
+}
+
+.travel-mode {
+  label {
+    @extend .h6;
+    position: relative;
+    padding-left: 30px;
+  }
+  input[type="radio"] {
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+  float: left; 
+  width: 50%;
+  @media (min-width: $MSize) {
+    width: 25%;
+  }
 }

@@ -51,26 +51,52 @@ html, body {
 .margin-top-0 {
   margin-top: 0 !important; }
 
+h1, h2, h3, h4, h5, h6, h7,
+.h1, .h2, .h3, .h4, .h5, form label, .h6, .btn-serif, .travel-mode label, .h7, .mainnav {
+  margin-top: 0;
+  margin-bottom: 20px; }
+
 h1, .h1 {
-  font-size: 50px; }
+  font-size: 32px; }
+  @media (min-width: 784px) {
+    h1, .h1 {
+      font-size: 50px; } }
 
 h2, .h2 {
-  font-size: 40px; }
+  font-size: 30px; }
+  @media (min-width: 784px) {
+    h2, .h2 {
+      font-size: 45px; } }
 
 h3, .h3 {
-  font-size: 45px; }
+  font-size: 28px; }
+  @media (min-width: 784px) {
+    h3, .h3 {
+      font-size: 40px; } }
 
 h4, .h4 {
-  font-size: 30px; }
+  font-size: 25px; }
+  @media (min-width: 784px) {
+    h4, .h4 {
+      font-size: 30px; } }
 
 h5, .h5, form label {
-  font-size: 24px; }
-
-h6, .h6, .send-email a {
   font-size: 20px; }
+  @media (min-width: 784px) {
+    h5, .h5, form label {
+      font-size: 24px; } }
+
+h6, .h6, .btn-serif, .travel-mode label {
+  font-size: 18px; }
+  @media (min-width: 784px) {
+    h6, .h6, .btn-serif, .travel-mode label {
+      font-size: 20px; } }
 
 h7, .h7, .mainnav {
-  font-size: 18px; }
+  font-size: 16px; }
+  @media (min-width: 784px) {
+    h7, .h7, .mainnav {
+      font-size: 18px; } }
 
 a {
   color: #b31621;
@@ -92,13 +118,18 @@ dt, dd {
   float: left; }
 
 dt {
-  width: 70%;
-  clear: left;
-  font-weight: bold; }
+  font-weight: bold;
+  clear: left; }
+  @media (min-width: 784px) {
+    dt {
+      width: 50%; } }
 
 dd {
-  width: 30%;
-  margin-left: 0; }
+  margin-left: 20px; }
+  @media (min-width: 784px) {
+    dd {
+      width: 30%;
+      margin-left: 0; } }
 
 .btn {
   background: #b31621;
@@ -136,9 +167,10 @@ dd {
   margin-bottom: 30px; }
   @media (min-width: 784px) {
     .adress {
-      float: left; } }
+      float: left;
+      width: 50%; } }
 
-.send-email a {
+.btn-serif {
   display: inline-block;
   font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   font-weight: normal !important;
@@ -148,14 +180,17 @@ dd {
   border-radius: 3px;
   background: #b31621;
   color: #fff;
-  margin: 20px 0; }
-  .send-email a:hover {
+  margin: 0 0 20px; }
+  .btn-serif:hover {
     text-decoration: none;
-    background: #333333; }
+    background: #333; }
   @media (min-width: 784px) {
-    .send-email a {
-      float: right;
-      margin-top: 40px; } }
+    .btn-serif {
+      float: left;
+      margin-top: 60px; }
+      .btn-serif.btn-serif-route {
+        margin-top: 0;
+        float: right; } }
 
 form label {
   display: block;
@@ -172,6 +207,52 @@ form textarea {
   margin-bottom: 20px; }
 form textarea {
   min-height: 200px; }
+
+#pushstat {
+  position: absolute;
+  bottom: 0;
+  z-index: -1; }
+
+.download {
+  display: block;
+  background: url(../img/download.png) 15px center no-repeat rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 15px 15px 15px 65px; }
+  .download:hover {
+    background-color: rgba(179, 22, 33, 0.3); }
+  @media (min-width: 480px) {
+    .download {
+      margin: 30px 0; } }
+
+.map {
+  display: none; }
+  @media (min-width: 480px) {
+    .map {
+      display: block; } }
+
+@media (min-width: 480px) {
+  #map_canvas {
+    height: 350px; } }
+@media (min-width: 784px) {
+  #map_canvas {
+    height: 500px; } }
+
+#routeForm input[type="submit"] {
+  width: auto; }
+
+.travel-mode {
+  float: left;
+  width: 50%; }
+  .travel-mode label {
+    position: relative;
+    padding-left: 30px; }
+  .travel-mode input[type="radio"] {
+    position: absolute;
+    top: 5px;
+    left: 0; }
+  @media (min-width: 784px) {
+    .travel-mode {
+      width: 25%; } }
 
 .bg-effect {
   height: 100%;
@@ -218,6 +299,7 @@ form textarea {
     z-index: 1; }
 
 .mainnav {
+  margin-bottom: 0;
   z-index: 10;
   position: relative;
   text-align: center; }
@@ -225,7 +307,8 @@ form textarea {
     margin: 0;
     padding: 20px 0; }
   .mainnav a {
-    padding: 5px 0;
+    display: block;
+    padding: 2px 0;
     text-transform: uppercase; }
     .mainnav a:hover, .mainnav a.active {
       color: #f3f3f3;
@@ -234,13 +317,14 @@ form textarea {
     .mainnav a {
       padding: 15px 15px 10px;
       text-transform: uppercase;
-      border-radius: 3px 3px 0 0; }
+      border-radius: 3px 3px 0 0;
+      background-color: rgba(0, 0, 0, 0.5); }
       .mainnav a:hover, .mainnav a.active {
-        color: #333333;
+        color: #333;
         text-decoration: none;
         background: #f3f3f3; }
     .mainnav ul {
-      padding: 40px 0 8px; }
+      padding: 40px 0 0; }
     .mainnav li {
       display: inline-block; } }
 
@@ -598,7 +682,7 @@ form textarea {
   top: 0;
   right: 0;
   padding: 1px 10px 5px;
-  background: #333333; }
+  background: #333; }
 
 .morph-button-overlay.scroll .morph-content {
   overflow-y: scroll; }
@@ -739,76 +823,6 @@ form textarea {
     opacity: 0;
     -webkit-transform: translate3d(0, 200px, 0);
     transform: translate3d(0, 200px, 0); } }
-#ip-container {
-  position: relative;
-  z-index: 2; }
-
-.ip-logo,
-.ip-loader {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  cursor: default;
-  pointer-events: none; }
-
-.ip-logo {
-  top: 0;
-  height: 100%;
-  -webkit-transform: translate3d(0, 25%, 0);
-  transform: translate3d(0, 25%, 0); }
-
-.ip-loader {
-  bottom: 40%; }
-
-.ip-header {
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  min-height: 480px;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/bg1.jpg);
-  background-size: cover; }
-  .ip-header .tokonina {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    margin-left: -150px; }
-  .ip-header:after {
-    width: 100%;
-    height: 100%;
-    display: block;
-    content: "";
-    background: #b31621; }
-  .ip-header h1 {
-    margin: 0; }
-  .ip-header .ip-inner {
-    display: block;
-    margin: 0 auto; }
-
-.ip-header .ip-logo svg text,
-.ip-header .ip-logo svg line {
-  /*fill: #ef6e7e;*/
-  fill: #b31621; }
-
-.ip-header .ip-logo svg line {
-  /*stroke: #ef6e7e;*/
-  stroke: #b31621; }
-
-.ip-header .ip-loader svg path {
-  fill: none;
-  stroke-width: 6; }
-
-.ip-header .ip-loader svg path.ip-loader-circlebg {
-  stroke: #ddd; }
-
-.ip-header .ip-loader svg path.ip-loader-circle {
-  -webkit-transition: stroke-dashoffset 0.2s;
-  transition: stroke-dashoffset 0.2s;
-  /*stroke: #ef6e7e;*/
-  stroke: #333; }
-
 .tokonina {
   margin: 30px auto 0;
   width: 300px;
@@ -820,21 +834,6 @@ form textarea {
     text-indent: -9999px; }
 
 /* Content */
-.ip-main {
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 0 0 10em 0;
-  max-width: 1100px;
-  width: 90%; }
-  .ip-main h2 {
-    margin: 0;
-    padding: 0.5em 0 1em;
-    color: #be4856;
-    text-align: center;
-    font-size: 4.25em;
-    font-size: 4vw;
-    line-height: 1; }
-
 .content-box {
   margin: 0 auto 50px;
   padding: 30px;
@@ -852,52 +851,5 @@ form textarea {
 
 /* Animations */
 /* Initial animation of header elements */
-.loading .ip-loader {
-  opacity: 1;
-  -webkit-animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
-  animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s; }
 
-/* Header elements when loading finishes */
-.loaded {
-  /* Header animation when loading finishes */
-  /* Content animations */ }
-  .loaded .ip-loader {
-    opacity: 1;
-    -webkit-animation: animLoadedLoader 0.5s cubic-bezier(0.7, 0, 0.3, 1) forwards;
-    animation: animLoadedLoader 0.5s cubic-bezier(0.7, 0, 0.3, 1) forwards; }
-  .loaded .ip-header {
-    -webkit-animation: animLoadedHeader 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
-    animation: animLoadedHeader 1s cubic-bezier(0.7, 0, 0.3, 1) forwards; }
-  .loaded .ip-main h2,
-  .loaded .ip-main .content-box {
-    -webkit-animation: animLoadedContent 1s cubic-bezier(0.7, 0, 0.3, 1) both;
-    animation: animLoadedContent 1s cubic-bezier(0.7, 0, 0.3, 1) both;
-    -webkit-animation-delay: 0.1s;
-    animation-delay: .1s; }
-
-/* Change layout class for header */
-.layout-switch .ip-header {
-  position: absolute; }
-
-/* No JS */
-.no-js .ip-header {
-  position: relative;
-  min-height: 0px; }
-
-/* Media queries */
-@media screen and (max-width: 45em) {
-  .ip-main h2 {
-    font-size: 2.25em;
-    font-size: 10vw; } }
-.b-lazy {
-  -webkit-transition: opacity 500ms ease-in-out;
-  -moz-transition: opacity 500ms ease-in-out;
-  -o-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
-  max-width: 100%;
-  opacity: 0; }
-
-.b-lazy.b-loaded {
-  opacity: 1; }
+/*# sourceMappingURL=custom.css.map */

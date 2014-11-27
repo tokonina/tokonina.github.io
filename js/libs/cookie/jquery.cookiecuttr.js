@@ -36,15 +36,6 @@
             cookieResetButton: false,
             cookieOverlayEnabled: false, // don't want a discreet toolbar? Fine, set this to true
             cookiePolicyLink: '/privacy-policy/', // if applicable, enter the link to your privacy policy here...
-<<<<<<< HEAD
-            cookieMessage: 'Het Catharina Ziekenhuis gebruikt cookies om het gebruik van de website te analyseren en het gebruiksgemak te verbeteren.<a href="{{cookiePolicyLink}}" title="Lees meer over cookies">Lees meer over cookies</a>',
-            cookieAnalyticsMessage: 'Het Catharina Ziekenhuis gebruikt cookies om het gebruik van de website te analyseren en het gebruiksgemak te verbeteren.',
-            cookieErrorMessage: "We\'re sorry, this feature places cookies in your browser and has been disabled. <br>To continue using this functionality, please",
-            cookieWhatAreTheyLink: "https://www.catharinaziekenhuis.nl/paginas/511-cookie-verklaring.html",
-            cookieDisable: '',
-            cookieExpires: 365,
-            cookieAcceptButtonText: '<div class="btn btn--green">Ga verder</div>',
-=======
             cookieMessage: 'Toko Nina gebruikt cookies om het gebruik van de website te analyseren en het gebruiksgemak te verbeteren.<a href="{{cookiePolicyLink}}" title="Lees meer over cookies">Lees meer over cookies</a>',
             cookieAnalyticsMessage: 'Toko Nina gebruikt cookies om het gebruik van de website te analyseren en het gebruiksgemak te verbeteren.',
             cookieErrorMessage: "We\'re sorry, this feature places cookies in your browser and has been disabled. <br>To continue using this functionality, please",
@@ -52,7 +43,6 @@
             cookieDisable: '',
             cookieExpires: 365,
             cookieAcceptButtonText: '<div class="btn btn-serif">Ga verder</div>',
->>>>>>> 3f0f37c6fe3290b69c72741d76db0405039abd69
             cookieDeclineButtonText: "geen cookies",
             cookieResetButtonText: "Reset cookies",
             cookieWhatAreLinkText: "Lees meer over cookies",
@@ -138,11 +128,7 @@
             } else if ((cookieDiscreetLink) && (!cookiePolicyPage)) { // show discreet link
                 $('body').append('<div class="cc-cookies cc-discreet"><a href="' + cookiePolicyLinkIn + '" title="' + cookieDiscreetLinkText + '">' + cookieDiscreetLinkText + '</a></div>');
             } else if (cookieAnalytics) { // show analytics overlay
-<<<<<<< HEAD
-                $('body').append('<div class="cc-cookies ' + cookieOverlay + '">' + '<div class="wrapper">' + '<p class="col-sm-8">' + cookieAnalyticsMessage + ' <a href="' + cookieWhatAreTheyLink + '" title="Visit All about cookies (External link)">' + cookieWhatAreLinkText + '</a></p>' + cookieAccept + cookieDecline + '</div></div>');
-=======
                 $('body').append('<div class="cc-cookies ' + cookieOverlay + '">' + '<div class="wrapper">' + '<p class="cookie__text">' + cookieAnalyticsMessage + ' <a href="' + cookieWhatAreTheyLink + '" title="Visit All about cookies (External link)">' + cookieWhatAreLinkText + '</a></p>' + cookieAccept + cookieDecline + '</div></div>');
->>>>>>> 3f0f37c6fe3290b69c72741d76db0405039abd69
             }
             if (cookiePolicyPage) { // show policy page overlay
                 $('body').append('<div class="cc-cookies ' + cookieOverlay + '">' + cookiePolicyPageMessage + " " + ' <a href="#accept" class="cc-cookie-accept">' + cookieAcceptButtonText + '</a> ' + ' <a href="#decline" class="cc-cookie-decline">' + cookieDeclineButtonText + '</a> ' + '</div>');

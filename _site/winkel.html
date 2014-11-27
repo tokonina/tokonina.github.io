@@ -3,9 +3,10 @@
 
   <head>
   
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
   
   <title>Toko Nina | Haarlem</title>
 
@@ -20,7 +21,7 @@
   <link rel="stylesheet" type="text/css" href="/css/custom.css">
   <!-- END: Stylesheet -->
 
-  <script src="/js/modernizr.custom.js"></script>
+  <script src="/js/libs/modernizr.custom.js"></script>
 </head>
 
   <body>
@@ -42,56 +43,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-src-md="/img/bg1-v1-md.jpg"
   data-src-lg="/img/bg1-v1-lg.jpg"
 >
-  <h1 class="tokonina"><a href="">Toko Nina Haarlem</a></h1>
-<p class="centered"><button id="trigger-overlay" type="button" class="btn">Navigatie</button></p>
-  <article class="content-box">
-    <div class="textbox">
-     <h2 class="h4 italic margin-bottom-0">Maaltijden met witte rijst</h2>
-      <p class="italic margin-top-0">Nasi goreng of bami goreng i.p.v witte rijst &euro; 1 extra</p>
-      <dl class="cf">
-        <dt>2 groentegerechten</dt>
-        <dd>&euro;4,50</dd>
-        <dt>3 groentegerechten</dt>
-        <dd>&euro;5,95</dd>
-        <dt>4 groentegerechten</dt>
-        <dd>&euro;7,50</dd>
-        <dt>1 vlees- &amp; 2 groentegerechten</dt>
-        <dd>&euro;6,50</dd>
-        <dt>2 vlees- &amp; 1 groentegerechten</dt>
-        <dd>&euro;6,95</dd>
-        <dt>1 vlees- &amp; 3 groentegerechten</dt>
-        <dd>&euro;7,95</dd>
-        <dt>2 vlees- &amp; 2 groentegerechten</dt>
-        <dd>&euro;8,50</dd>
-        <dt>3 vlees- &amp; 1 groentegerechten</dt>
-        <dd>&euro;8,95</dd>
-      </dl>
-    </div>
-  </article>
-  <footer class="signatured centered">
+  <div class="wrapper">
+    <h1 class="tokonina"><a href="">Toko Nina Haarlem</a></h1>
+<!-- <p class="centered"><button id="trigger-overlay" type="button" class="btn">Navigatie</button></p> -->
+<nav class="mainnav font-orator">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/menu.html">Menu</a></li>
+    <li><a href="/catering.html">Catering</a></li>
+    <li><a href="/winkel.html">Winkel</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+  </ul>
+</nav>
+    <article class="content-box">
+      <div class="textbox">
+       <h2 class="h4 italic margin-bottom-0">Maaltijden met witte rijst</h2>
+        <p class="italic margin-top-0">Nasi goreng of bami goreng i.p.v witte rijst &euro; 1 extra</p>
+        <dl class="cf">
+          <dt>2 groentegerechten</dt>
+          <dd>&euro;4,50</dd>
+          <dt>3 groentegerechten</dt>
+          <dd>&euro;5,95</dd>
+          <dt>4 groentegerechten</dt>
+          <dd>&euro;7,50</dd>
+          <dt>1 vlees- &amp; 2 groentegerechten</dt>
+          <dd>&euro;6,50</dd>
+          <dt>2 vlees- &amp; 1 groentegerechten</dt>
+          <dd>&euro;6,95</dd>
+          <dt>1 vlees- &amp; 3 groentegerechten</dt>
+          <dd>&euro;7,95</dd>
+          <dt>2 vlees- &amp; 2 groentegerechten</dt>
+          <dd>&euro;8,50</dd>
+          <dt>3 vlees- &amp; 1 groentegerechten</dt>
+          <dd>&euro;8,95</dd>
+        </dl>
+
+        <a href="/img/tokonina.pdf" target="_blank" class="download">Download Toko Nina - Winkel folder PDF</a>
+      </div>
+    </article>
+    <footer class="signatured centered">
   Passionately developed by <a href="http://ivanasetiawan.com" target="_blank">I. Setiawan</a>
 </footer>
+  </div>
 </div>
 
 
-    <!-- open/close -->
-<div class="overlay overlay-contentpush">
-  <button type="button" class="overlay-close">Close</button>
-  <nav class="link-arrow">
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/menu.html">Menu</a></li>
-      <li><a href="/catering.html">Catering</a></li>
-      <li><a href="/winkel.html">Winkel</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</div>
+    <script src="/js/libs/jquery-2.1.1.min.js"></script>
 
-<script src="/js/navbehaviour.js"></script>
-<script src="/js/classie.js"></script>
-<script src="/js/blazy.min.js"></script>
-<script src="/js/imageScript.js"></script>
+<script src="/js/libs/cookie/jquery.cookie.js"></script>
+<script src="/js/libs/cookie/jquery.cookiecuttr.js"></script>
+
+<script src="/js/libs/blazy.min.js"></script>
+<script src="/js/extraScript.js"></script>
+
 
   </body>
 

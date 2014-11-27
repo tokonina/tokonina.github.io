@@ -43,8 +43,30 @@
   }
 }
 
-@import "moph-btn";
+.tokonina {
+  margin: 30px auto 0;
+  width: 300px;
+  height: 120px;
+  background-image: url(../img/logo.png);
+  background-size: cover;
+  a { display: block; text-indent: -9999px; }
+}
 
-@import "keyframes";
+.content-box {
+  margin: 0 auto 50px;
+  padding:30px;
+  min-height: 550px;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 8px;
+  background: $color-grey-light;
+  background-size: 100%;
+  color: #333;
+  line-height: 1.4;
+  font-size: 18px;
+  box-sizing: border-box;
+  font-family: $font-serif;
+}
 
-@import "effect";
+
+@import "cookie";

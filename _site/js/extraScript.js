@@ -25,4 +25,10 @@
   if ($('.map').length) {
     initializeRoute();
   } 
+
+  ////////
+  // Cookiebar
+  $.cookieCuttr();  
+  ////////
+
 })();

@@ -1,0 +1,50 @@
+@import "vars";
+
+@import "base";
+
+@import "bg";
+
+.pricelist {
+	@media (min-width: $MSize) {
+		span {
+			float: right;
+		}
+	}
+}
+
+.textbox {
+	@media (min-width: $MSize) {
+		margin: 0 5%;
+		font-size: 20px;
+	}
+}
+
+.signatured {
+  padding: 0 0 30px;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  font-family: $font-serif;
+  font-size: 18px;
+  a {
+    color: #fff;
+    font-style: italic;
+    font-size: 20px;
+    display: inline-block;
+    padding: 0 3px;
+    letter-spacing: 1px;
+    &:hover {
+      text-decoration: none;
+      background: rgba(179,22,33,.5);
+      transition: background 0.2s;
+    }
+  }
+}
+
+@import "style-nav";
+
+@import "linkarrow";
+
+@import "keyframes";
+
+@import "effect";

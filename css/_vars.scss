@@ -3,6 +3,8 @@ $font-serif: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Tim
 $font-ondine: 'Ondine', $font-serif; 
 $font-orator: 'Orator', $font-serif;
 
+
+$color-white: #fff;
 $color-red: #b31621;
 $color-grey: #333; 
 $color-grey-light: #f3f3f3; 
@@ -10,3 +12,5 @@ $color-grey-light: #f3f3f3;
 $LSize: 1024px;
 $MSize: 784px;
 $SSize: 480px;
+$screen-md: 784px;
+$screen-xs-max: 479px;

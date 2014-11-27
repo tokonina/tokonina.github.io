@@ -159,7 +159,6 @@ dd {
 .wrapper {
   overflow: hidden;
   margin: 0 auto;
-  padding: 0 0 10em 0;
   max-width: 1100px;
   width: 90%; }
 
@@ -356,6 +355,7 @@ form textarea {
       background: rgba(179, 22, 33, 0.5);
       transition: background 0.2s; }
 
+<<<<<<< HEAD
 /* Morph Button: Default Styles */
 .morph-button {
   position: relative;
@@ -823,6 +823,8 @@ form textarea {
     opacity: 0;
     -webkit-transform: translate3d(0, 200px, 0);
     transform: translate3d(0, 200px, 0); } }
+=======
+>>>>>>> 3f0f37c6fe3290b69c72741d76db0405039abd69
 .tokonina {
   margin: 30px auto 0;
   width: 300px;
@@ -833,11 +835,14 @@ form textarea {
     display: block;
     text-indent: -9999px; }
 
+<<<<<<< HEAD
 /* Content */
+=======
+>>>>>>> 3f0f37c6fe3290b69c72741d76db0405039abd69
 .content-box {
   margin: 0 auto 50px;
   padding: 30px;
-  min-height: 550px;
+  /*min-height: 550px;*/
   max-width: 1000px;
   width: 100%;
   border-radius: 8px;
@@ -849,7 +854,49 @@ form textarea {
   box-sizing: border-box;
   font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif; }
 
+<<<<<<< HEAD
 /* Animations */
 /* Initial animation of header elements */
+=======
+@-webkit-keyframes slideUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(300px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+.cc-cookies {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  z-index: 20;
+  font-size: 14px;
+  color: #fff;
+  overflow: hidden;
+  -webkit-animation: slideUp 0.3s ease alternate; }
+  .cc-cookies a {
+    color: #fff;
+    font-style: italic;
+    text-decoration: underline; }
+    .cc-cookies a:hover {
+      color: #b31621; }
+  .cc-cookies .btn:hover {
+    background-color: #fff; }
+  .cc-cookies p {
+    margin: 20px 0;
+    line-height: 1.4; }
+  @media (max-width: 479px) {
+    .cc-cookies .btn {
+      margin: 0 0 20px; } }
+  @media (min-width: 784px) {
+    .cc-cookies .btn {
+      float: right;
+      margin-top: 20px; }
+    .cc-cookies p {
+      margin: 30px 0 20px;
+      float: left;
+      width: 80%; } }
+>>>>>>> 3f0f37c6fe3290b69c72741d76db0405039abd69
 
 /*# sourceMappingURL=custom.css.map */

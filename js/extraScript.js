@@ -25,4 +25,13 @@
   if ($('.map').length) {
     initializeRoute();
   } 
+<<<<<<< HEAD
+=======
+
+  ////////
+  // Cookiebar
+  $.cookieCuttr();  
+  ////////
+
+>>>>>>> 3f0f37c6fe3290b69c72741d76db0405039abd69
 })();

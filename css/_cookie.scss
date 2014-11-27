@@ -1,0 +1,57 @@
+@-webkit-keyframes slideUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(300px);
+  } 
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+.cc-cookies  {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  z-index: 20;
+  font-size: 14px;
+  color: $color-white;
+  overflow: hidden;
+  -webkit-animation: slideUp 0.3s ease alternate;
+
+  a { 
+    color: $color-white; 
+    font-style: italic; 
+    text-decoration: underline; 
+    &:hover { color: $color-red; }
+  }
+
+  .btn {
+    &:hover {
+      background-color: $color-white;
+    }
+  }
+  
+  p { 
+    margin: 20px 0; 
+    line-height: 1.4;
+  }
+  
+  @media (max-width: $screen-xs-max) {
+    .btn { margin: 0 0 20px; }
+  }
+  
+  @media (min-width: $screen-md) {
+    .btn {
+      float: right;
+      margin-top: 20px;
+    }
+    p { 
+      margin: 30px 0 20px; 
+      float: left;
+      width: 80%;
+    }
+  }
+}
+

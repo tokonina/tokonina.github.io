@@ -1,7 +1,0 @@
-#map_canvas {
-  width: 100%;
-  margin-top: 30px;
-  height: 250px; }
-  @media (min-width: 784px) {
-    #map_canvas {
-      height: 550px; } }

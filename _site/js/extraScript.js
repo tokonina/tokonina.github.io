@@ -26,6 +26,9 @@
     initializeRoute();
   } 
 
+
+  $('.oy').featherlight({type: 'image'});
+  
   ////////
   // Cookiebar
   $.cookieCuttr();  

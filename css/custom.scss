@@ -14,8 +14,36 @@
 	}
 }
 
+.special {
+  padding: 10px 15px;
+  border-radius: 4px;
+  background: rgba(255,0,0,0.1);
+  @media (min-width: $MSize) {
+    padding: 10px 25px;
+  }
+}
+
 .textbox {
-	@media (min-width: $MSize) {
+
+  h2 { color: $color-red; 
+    span {
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 60%;
+      display: block;
+      @extend .italic;
+    }
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+	h3 { margin-bottom: 0;  
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+
+  @media (min-width: $MSize) {
 		margin: 0 5%;
 		font-size: 20px;
 	}
@@ -70,3 +98,4 @@
 
 
 @import "cookie";
+@import "feather";

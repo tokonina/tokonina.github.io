@@ -1,0 +1,55 @@
+.lb { cursor: pointer; }
+
+.featherlight {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.6);
+	z-index: 200;
+	top: 0;
+	left: 0;
+}
+
+.featherlight-content {
+	max-width: 60%;
+	max-height: 60%;
+	margin: 5% auto;
+	text-align: center;
+
+	img { 
+		max-width: 100%; 
+		height: auto; 
+		border: solid 8px #fff;
+ 	}
+
+ 	.featherlight-close {
+ 		position: absolute;
+ 		background: #333;
+ 		z-index: 201;
+ 		top: 0;
+ 		right: 0;
+ 		width: 30px;
+ 		height: 30px;
+ 		line-height: 33px;
+ 		color: #fff;
+ 		cursor: pointer;
+ 		&:hover {
+ 			background: $color-red;
+ 		}
+ 	}
+}
+
+.gallery-item {
+	> a {
+		width: 25%;
+		max-height: 155px;
+		overflow: hidden;
+		display: block;
+		cursor: pointer;
+		display: inline-block;
+		margin-left: -4px;
+		&:hover { opacity: 0.8; }
+	}
+
+	img { max-width: 100%; }
+}

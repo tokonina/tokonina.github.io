@@ -41,14 +41,20 @@
 
 .gallery-item {
 	> a {
-		width: 25%;
+		width: 100%;
 		max-height: 155px;
 		overflow: hidden;
-		display: block;
 		cursor: pointer;
 		display: inline-block;
+		vertical-align: top;
 		margin-left: -4px;
 		&:hover { opacity: 0.8; }
+		@media (min-width: $SSize) {
+			width: 50%;
+		}
+		@media (min-width: $LSize) {
+			width: 25%;
+		}
 	}
 
 	img { max-width: 100%; }

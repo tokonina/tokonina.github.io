@@ -402,6 +402,11 @@ form textarea {
   box-sizing: border-box;
   font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif; }
 
+.imgbox img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top; }
+
 @-webkit-keyframes slideUp {
   0% {
     opacity: 0;

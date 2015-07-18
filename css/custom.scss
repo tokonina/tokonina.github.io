@@ -96,6 +96,13 @@
   font-family: $font-serif;
 }
 
+.imgbox {
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+}
 
 @import "cookie";
 @import "feather";

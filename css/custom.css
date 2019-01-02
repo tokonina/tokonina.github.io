@@ -502,4 +502,12 @@ form textarea {
 .gallery-item img {
   max-width: 100%; }
 
+.snapwidget ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden; }
+.snapwidget li {
+  float: left; }
+
 /*# sourceMappingURL=custom.css.map */

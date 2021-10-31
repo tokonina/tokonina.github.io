@@ -2,12 +2,12 @@
 <html lang="en" class="no-js">
 
   <head>
-  
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  
+
   <title>Toko Nina | Haarlem</title>
 
   <meta name="description" content="Toko Nina staat al sinds 1981 garant voor originele en smakelijke Indonesische gerechten" />
@@ -22,6 +22,10 @@
   <!-- END: Stylesheet -->
 
   <script src="/js/libs/modernizr.custom.js"></script>
+  <style>
+    .venopi-btn { transition: color 0.3s ease-in-out,background-color 0.3s ease-in-out; font-weight: 500; letter-spacing: 0.5px; padding: 9px 19px; background: #21aa93; border-radius: 34px; color: #fff; font-family:'Nunito Sans',Avenir,'Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:14px; }
+    .venopi-btn:hover { background: #1E8183; text-decoration: none; transition: color 0.3s ease-in-out,background-color 0.3s ease-in-out; }
+  </style>
 </head>
 
   <body>
@@ -52,6 +56,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </nav>
 
     <article class="content-box">
+      <h2 class="h4">Offerte aanvragen</h2>
+      <p>Allereerst bedankt voor uw interesse voor onze cateringservice. U kunt een offerte aanvragen bij Venopi.</p>
+      <p style="margin-bottom: 24px;"><a href="https://www.venopi.com/widget/toko-nina-haarlem/" target="_blank" class="venopi-btn">Boek onze cateringservice op Venopi</a></p>
 
       <h2 class="h4">Openingstijden</h2>
       <dl class="cf">
@@ -112,19 +119,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     // Add a marker to the map for the end-point of the directions.
     var image = 'img/marker.png';
     var marker = new google.maps.Marker({
-      position: latlng, 
+      position: latlng,
       map: map,
       icon: image
     });
   }
 
   function calcRoute() {
-    // get the travelmode, startpoint and via point from the form   
+    // get the travelmode, startpoint and via point from the form
     var travelMode = $('input[name="travelMode"]:checked').val();
     var start = $("#routeStart").val();
 
     // endpoint is a geolocation
-    var end = "52.380047,4.633462"; 
+    var end = "52.380047,4.633462";
     var waypoints = []; // init an empty waypoints array
 
     var request = {
@@ -155,7 +162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         } else if (status == 'NOT_FOUND') {
           alert('At least one of the origin, destination, or waypoints could not be geocoded.');
         } else if (status == 'INVALID_REQUEST') {
-          alert('The DirectionsRequest provided was invalid.');         
+          alert('The DirectionsRequest provided was invalid.');
         } else {
           alert("There was an unknown error in your request. Requeststatus: nn"+status);
         }
@@ -179,7 +186,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
 
       <label>Reismethode:</label>
-      
+
       <div class="cf">
         <div class="travel-mode">
           <label><input type="radio" name="travelMode" value="DRIVING" checked /> Auto</label>
@@ -202,7 +209,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 
 </div>
-    
+
     </article>
     <footer class="signatured centered">
   Passionately developed by <a href="http://ivanasetiawan.com" target="_blank">I. Setiawan</a>
@@ -221,7 +228,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="/js/extraScript.js"></script>
 
-    
+
   </body>
 
 </html>
